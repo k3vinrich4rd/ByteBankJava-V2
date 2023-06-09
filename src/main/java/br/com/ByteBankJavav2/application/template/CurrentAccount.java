@@ -16,5 +16,4 @@ public class CurrentAccount extends Account {
         super.balance = super.balance.add(value);
         balanceRound();
     }
-
 }
