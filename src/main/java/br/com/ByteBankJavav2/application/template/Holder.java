@@ -48,4 +48,14 @@ public class Holder {
     public void setAccount(Account account) {
         this.account = account;
     }
+
+    @Override
+    public String toString() {
+        return "\nHolder" + "\n" +
+                "name: " + name + "\n" +
+                "cpf: " + cpf + "\n" +
+                "addressResidential: " + addressResidential + "\n" +
+                "account: " + account +
+                "\n";
+    }
 }

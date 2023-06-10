@@ -9,5 +9,10 @@ public class AddressResidential extends Address {
     public AddressResidential() {
 
     }
+
+    @Override
+    public String toString() {
+        return "AddressResidential{} " + super.toString();
+    }
 }
 

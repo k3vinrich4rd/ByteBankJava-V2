@@ -80,4 +80,17 @@ public abstract class Address {
     public void setComplement(String complement) {
         this.complement = complement;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "publicPlace='" + publicPlace + '\'' +
+                ", number=" + number +
+                ", neighborhood='" + neighborhood + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", complement='" + complement + '\'' +
+                '}';
+    }
 }

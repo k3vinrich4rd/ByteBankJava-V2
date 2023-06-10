@@ -9,4 +9,9 @@ public class AddressCommercial extends Address {
     public AddressCommercial() {
         super();
     }
+
+    @Override
+    public String toString() {
+        return "AddressCommercial{} " + super.toString();
+    }
 }

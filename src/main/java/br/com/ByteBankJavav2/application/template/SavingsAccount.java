@@ -16,4 +16,9 @@ public class SavingsAccount extends Account {
         super.balance = super.balance.add(value);
         balanceRound();
     }
+
+    @Override
+    public String toString() {
+        return "SavingsAccount{} " + super.toString();
+    }
 }

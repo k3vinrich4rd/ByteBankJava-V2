@@ -28,7 +28,6 @@ public abstract class Account {
     public void toWithdraw(BigDecimal value) throws InsufficientBalanceException {
         if (this.balance.compareTo(value) < 0) {
             System.out.println("Balance in account: " + this.balance + " value to withdraw: " + value);
-
             throw new InsufficientBalanceException();
         }
         this.balance = this.balance.subtract(value);
@@ -39,7 +38,9 @@ public abstract class Account {
 
     public void tranfer(BigDecimal value, Account account) throws InsufficientBalanceException {
         if (this.balance.compareTo(value) < 0) {
+            System.out.println("Balance in account: " + this.balance + " value to transfer: " + value);
             throw new InsufficientBalanceException();
+
         }
         this.balance = this.balance.add(value);
         account.depositInAccount(value);
