@@ -8,9 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -18,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ByteBankJavaV2ApplicationTests {
     private CurrentAccount currentAccount;
     private SavingsAccount savingsAccount;
-    private final List<Account> accounts = new ArrayList<>();
     private final ByteBank byteBank = new ByteBank();
 
     @BeforeEach
