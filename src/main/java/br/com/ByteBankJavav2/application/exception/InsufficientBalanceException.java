@@ -6,6 +6,6 @@ public class InsufficientBalanceException extends Exception {
 
     @Override
     public String getMessage() {
-        return ExceptionsEnum.INSUFICIENT_BALANCE.getMessage();
+        return ExceptionsEnum.INSUFFICIENT_BALANCE.getMessage();
     }
 }

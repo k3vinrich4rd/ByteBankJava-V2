@@ -1,13 +1,17 @@
 package br.com.ByteBankJavav2;
 
 import br.com.ByteBankJavav2.application.exception.InsufficientBalanceException;
-import br.com.ByteBankJavav2.application.template.*;
+import br.com.ByteBankJavav2.application.template.ByteBank;
+import br.com.ByteBankJavav2.application.template.CurrentAccount;
+import br.com.ByteBankJavav2.application.template.Holder;
+import br.com.ByteBankJavav2.application.template.SavingsAccount;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -31,9 +35,9 @@ class ByteBankJavaV2ApplicationTests {
 
     @Test
     @DisplayName("Desenvolvimento guiado por testes - deposito")
-    void aContaDeveEfetuarUmDeposito() {
-        currentAccount.depositInAccount(new BigDecimal("30"));
-        assertEquals(new BigDecimal("330.00"), currentAccount.getBalance());
+    void efetuandoUmDeposito() {
+        currentAccount.depositInAccount(new BigDecimal("300"));
+        assertEquals(new BigDecimal("600.00"), currentAccount.getBalance());
     }
 
     @Test
@@ -58,8 +62,7 @@ class ByteBankJavaV2ApplicationTests {
         var holder2 = new Holder();
         byteBank.addHolders(holder1);
         byteBank.addHolders(holder2);
-        var sizeListHolders = byteBank.sizeListHolders();
-        assertEquals(2, sizeListHolders);
+        assertEquals(2, byteBank.sizeListHolders());
     }
 
     //Testando listas
@@ -70,8 +73,7 @@ class ByteBankJavaV2ApplicationTests {
         var savingsAccount = new SavingsAccount();
         byteBank.addAccount(currentAccount);
         byteBank.addAccount(savingsAccount);
-        var sizeListAccounts = byteBank.sizeListAccount();
-        assertEquals(2, sizeListAccounts);
+        assertEquals(2, byteBank.sizeListAccount());
     }
 
     //Testando exceptions
